@@ -1,0 +1,19 @@
+{
+  "name": "movie-night-discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot to allow users to randomly pick from a shuffled list of movies",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0"
+  }
+}
