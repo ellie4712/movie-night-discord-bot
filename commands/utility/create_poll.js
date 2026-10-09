@@ -79,7 +79,7 @@ module.exports = {
                     { text: rand_movies[3].Title },
                 ],
                 allowMultiSelect: false,
-                duration: 1,
+                duration: 24,
             }
         });
     }
