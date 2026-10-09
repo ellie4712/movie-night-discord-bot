@@ -5,7 +5,7 @@ const { Client, Collection, Events, GatewayIntentBits, MessageFlags } = require(
 const token = process.env.token;
 
 // Create a new client instance
-const client = new Client({ intents: [GatewayIntentBits.Guilds, 'GuildMessagePolls', 'Guilds'] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, 'GuildMessagePolls', 'Guilds', 'GuildMessages'] });
 
 client.commands = new Collection();
 
@@ -33,6 +33,7 @@ const eventFiles = fs.readdirSync(eventsPath).filter((file) => file.endsWith('.j
 for (const file of eventFiles) {
 	const filePath = path.join(eventsPath, file);
 	const event = require(filePath);
+
 	if (event.once) {
 		client.once(event.name, (...args) => event.execute(...args));
 	} else {
